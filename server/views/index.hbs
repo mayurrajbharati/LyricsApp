@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lyrics</title>
+        <link rel='stylesheet' href='/css/styles.css'>
+        <link rel = 'icon' href= '/img/icon.png'>
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            
+            <p>This is a simple website to find lyrics of songs.</p>
+            <p>Hope you enjoy it!</p>
+            
+            <form>
+                <input placeholder ="Song name" id="input-1">
+                <input placeholder = "Artist name" id="input-2">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+            <p id="message-3"></p>
+
+        </div>
+
+        {{>footer}}
+        
+        <script src ='/js/client.js'></script>
+    </body>
+</html>
