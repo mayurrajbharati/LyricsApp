@@ -9,7 +9,8 @@ const partials = path.join(__dirname, '/partials');
 
 hbs.registerPartials(partials);
 
-app=express();
+const app=express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine','hbs');
 app.set('views',viewPath);
@@ -70,6 +71,6 @@ app.get('*',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{
-    console.log('Your server is up on port 3000!');
+app.listen(port,()=>{
+    console.log('Your server is up on port '+ port );
 })
