@@ -26,7 +26,7 @@ app.get('',(req,res)=>{
 app.get('/lyrics',(req,res)=>{
     if(!req.query.song || !req.query.artist){
         return res.send({
-            error: 'Please provide song name or artist name',
+            error: 'Please provide song name or artist\'s name',
         })
     }
     lyrics_get(req.query.song, req.query.artist,(error,data)=>{
