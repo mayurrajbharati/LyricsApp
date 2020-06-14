@@ -37,7 +37,7 @@ app.get('/lyrics',(req,res)=>{
             res.send({
                Song_name: req.query.song,
                Artist: req.query.artist,
-               lyrics: 'I dont know',//data.replace('******* This Lyrics is NOT for Commercial use ******* (1409619936579)',''),
+               lyrics: data.toString().replace('******* This Lyrics is NOT for Commercial use ******* (1409619936579)',''),
             })
     })
     });
