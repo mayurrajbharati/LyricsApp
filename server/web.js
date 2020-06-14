@@ -34,10 +34,11 @@ app.get('/lyrics',(req,res)=>{
         if(error){
             return res.send({error})
             }
+            console.log(data);
             res.send({
                Song_name: req.query.song,
                Artist: req.query.artist,
-               lyrics: data.toString().replace('******* This Lyrics is NOT for Commercial use ******* (1409619936579)',''),
+               lyrics:data.replace('******* This Lyrics is NOT for Commercial use *******\n(1409619936579)',' '),
             })
     })
     });
